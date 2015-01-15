@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato ExtraLight.ttf">
+            <string>Machinato-ExtraLight</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatSectionViewController">
+            <connections>
+                <outlet property="tableView" destination="cWD-7Q-VEy" id="FqL-Vp-Du2"/>
+                <outlet property="view" destination="q6M-TH-mJq" id="pJN-b7-vBa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="q6M-TH-mJq">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW8-s4-IX1">
+                    <rect key="frame" x="-6" y="0.0" width="88" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="88" id="Crt-4q-Emt">
+                            <variation key="widthClass=compact" constant="65"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="&lt;&lt;==">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="STY-Wc-vkV"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cWD-7Q-VEy">
+                    <rect key="frame" x="0.0" y="52" width="375" height="615"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="x55-zK-cHb"/>
+                        <outlet property="delegate" destination="-1" id="i3X-hH-HVF"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OX-xd-VdG">
+                    <rect key="frame" x="165" y="15" width="45" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="CvD-Yj-ysS"/>
+                        <constraint firstAttribute="height" constant="21" id="EiC-h4-mch"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Machinato-ExtraLight" family="Machinato" pointSize="18"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.022833218230000001" green="0.022833218230000001" blue="0.022833218230000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="4OX-xd-VdG" firstAttribute="leading" secondItem="zW8-s4-IX1" secondAttribute="trailing" constant="83" id="3NC-K9-8IB">
+                    <variation key="widthClass=compact" constant="105"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="cWD-7Q-VEy" secondAttribute="trailing" id="8dS-US-hbf"/>
+                <constraint firstItem="4OX-xd-VdG" firstAttribute="centerY" secondItem="zW8-s4-IX1" secondAttribute="centerY" id="GQG-6D-ql0"/>
+                <constraint firstItem="zW8-s4-IX1" firstAttribute="top" secondItem="q6M-TH-mJq" secondAttribute="topMargin" constant="-8" id="O4w-Zd-3UP">
+                    <variation key="widthClass=compact" constant="-8"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="cWD-7Q-VEy" secondAttribute="bottom" id="RiD-R0-Uqh"/>
+                <constraint firstItem="cWD-7Q-VEy" firstAttribute="top" secondItem="4OX-xd-VdG" secondAttribute="bottom" constant="16" id="TFm-Q4-D1Y">
+                    <variation key="widthClass=compact" constant="16"/>
+                </constraint>
+                <constraint firstItem="4OX-xd-VdG" firstAttribute="top" secondItem="q6M-TH-mJq" secondAttribute="top" constant="15" id="b1d-OS-6mg">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstItem="zW8-s4-IX1" firstAttribute="leading" secondItem="q6M-TH-mJq" secondAttribute="leadingMargin" constant="-14" id="lLO-b4-WdV">
+                    <variation key="widthClass=compact" constant="-13"/>
+                </constraint>
+                <constraint firstItem="cWD-7Q-VEy" firstAttribute="leading" secondItem="q6M-TH-mJq" secondAttribute="leading" id="tcN-FS-nP6"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="706" y="-24"/>
+        </view>
+    </objects>
+</document>
